@@ -1,3 +1,5 @@
 -- Grab specific data from server commands
-local VERSION = io.popen("cat /proc/version"):read("*a") -- runs command
-print(VERSION)
+local ARCH = io.popen("uname -m"):read("*a")
+local KERNEL = io.popen("uname -mrs"):read("*a");
+print(ARCH)
+print(KERNEL)
